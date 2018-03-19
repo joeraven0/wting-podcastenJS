@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <script type="text/javascript" src=" https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="jquery.js" /></script>
+    <script type="text/javascript" src="jqueryui.js" /></script>
+    <script type="text/javascript" src="design.js" /></script>
+    <script type="text/javascript" src="random.js" /></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="En podcast">
+    <meta name="keywords" content="podcast, webbradio, underhållning">
+    <meta name="author" content="Joakim Ringstad">
+    <!--ALWAYS INCLUDE "base.css" together with
+     THIS base.css -->
+    <link rel="stylesheet" type="text/css" href="jselements.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+    <!--
+    -main.css         (USING FLOAT AND POSITION)
+    OR
+    -grid.css         (USING GRID-LAYOUT)
+    -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!--  <link rel="stylesheet" type="text/css" href="grid.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <title>Podcasten - En podcast</title>
+</head>
+
+<body>
+    <header>
+        <div id="header_img">
+            <div id="text">
+                <h1>En podcast</h1>
+                <h2>-Ingen säger någonting</h2>
+            </div>
+        </div>
+    </header>
+    <nav id="navbar">
+        <a class="active" href="index.html"><img src="img/nav/001-home.svg" alt="Hem"><p>Hem</p></a>
+        <a href="episodes.html"><img src="img/nav/018-music.svg" alt="Avsnitt"><p>Avsnitt</p></a>
+        <a href="about.html"><img src="img/nav/148-equalizer2.svg" alt="Om podcasten"><p>Om podcasten</p></a>
+        <a href="blog.html"><img src="img/nav/035-file-text.svg" alt="Nyheter"><p>Nyheter</p></a>
+        <a href="contact.html"><img src="img/nav/388-mail.svg" alt="Kontakt"><p>Kontakt</p></a>
+    </nav>
+    <main class="index">
+        <h3 class="pagetitle">Hem</h3>
+        <article class="description">
+            <h3>Vi har en podcast</h3>
+            <p>Innehållet varierar och baserar sig på den senaste veckans händelser. Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok. Lorem ipsum har inte bara överlevt fem århundraden, utan även övergången till elektronisk typografi utan större förändringar.</p>
+        </article>
+        <article class="box">
+            <h3>Senaste nyheten</h3>
+            <section id="post">
+                <h4>Brand i studion</h4>
+                <p>Det har brunnit i studion så denna veckan kommer vi spela in i bilen istället</p>
+                <p>2018-01-22</p>
+                <a href="" title="">Läs mer</a>
+            </section>
+        </article>
+        <article class="box">
+            <h3>Senaste avsnittet</h3>
+            <h4>Avsnitt 10 - Tacka döden för livet</h4>
+            <div class="player">
+                <a href="" title=""><img src="img/player/283-backward.svg" alt=""></a>
+                <a href="" title=""><img src="img/player/280-stop.svg" alt=""></a>
+                <a href="" title=""><img src="img/player/278-play2.svg" alt=""></a>
+                <a href="" title=""><img src="img/player/279-pause.svg" alt=""></a>
+                <a href="" title=""><img src="img/player/284-forward2.svg" alt=""></a>
+            </div>
+            <p>Veckans avsnitt handlar om krokodilsvälten på Kolmården, onda skalbaggar och om man kan leva utan att dö.</p>
+            <a href="" title="">Läs mer</a>
+        </article>
+    </main>
+    <aside id="sidebar">
+        <div id="twitter">
+            <a class="twitter-timeline" href="https://twitter.com/umeauniversitet"></a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </aside>
+    <footer>
+        <div>
+            <p>&copy; Copyright 2018 Podcastsällskapet
+                <br> All rights reserved</p>
+        </div>
+        <div>
+            <p>Skänk pengar på patreon
+                <br> <a href="" title="Länk till patreon">Länk till patreon</a></p>
+        </div>
+        <div>
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+            </p>
+        </div>
+        <div id="social_media">
+            <a href="http://www.facebook.com" title="länk till facebook" target="_blank"><img src="img/401-facebook.svg" alt="facebook logo"></a>
+            <a href="http://www.instagram.com" title="länk till instagram" target="_blank"><img src="img/403-instagram.svg" alt="instagram logo"></a>
+            <a href="http://www.twitter.com" title="länk till twitter" target="_blank"><img src="img/407-twitter.svg" alt="twitter logo"></a>
+        </div>
+    </footer>
+    <div class="smallapp">
+        <div id="app1" class="app">
+            <img src="img/006-pencil.svg" alt="Expand button" title="Ändra utséende">
+        </div>
+        <div id="app2" class="app">
+            <img title="Ta bort objekt" src="img/173-bin.svg" alt="Expand button">
+        </div>
+        <div id="app3" class="app">
+            <img title="Generera bakgrundsfärg" src="img/305-shuffle.svg" alt="Expand button">
+        </div>
+        <div id="app4" class="app">
+            <img onclick="scrollablePage()" title="Expandera sida" src="img/140-enlarge2.svg" alt="Expand button">
+        </div>
+    </div>
+    <div id="application1" class="application">
+        <img class="closeBtn" src="img/272-cross.svg" alt="Close button">
+        <h1>Javascript - inställningar</h1>
+        <div class="design">
+            <h2>Design</h2>
+            <div class="content">
+                <div>
+                    <button onclick="imgSize()">Bildstorlek</button>
+                    <p id="imgsizeJS">Standard</p>
+                </div>
+                <div>
+                    <button onclick="imgChange()">Byt bild</button>
+                    <p id="imgchangeJS">Standard</p>
+                </div>
+                <div>
+                    <button onclick="backgroundColor()">Bakgrundsfärg</button>
+                    <p id="bgcolorJS">Standard</p>
+                </div>
+                <div>
+                    <button onclick="textColor()">Textfärg</button>
+                    <p id="colorJS">Standard</p>
+                </div>
+                <div>
+                    <button onclick="fontSize()">Textstorlek</button>
+                    <p id="fontsizeJS">Standard</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="application2" class="application">
+        <img class="closeBtn" src="img/272-cross.svg" alt="Close button">
+        <h1>JQUERY</h1>
+        <div class="design">
+            <div class="content">
+                <div>
+                    <h3>Lägg till/ta bort</h3>
+                    <div>
+                        <button id="removeHeader">Ta bort header</button>
+                    </div>
+                    <div>
+                        <button id="removeHeaderimg">Ta bort provocerande bild</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div>
+                    <h3>Opacitet</h3>
+                    <div>
+                    <button id="opacityHeaders">Minska opacitet för titlar</button>
+                </div>
+                <div>
+                    <button id="opacityParagraphs">Minska opacitet för paragrafer</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="application3" class="application">
+        <img class="closeBtn" src="img/272-cross.svg" alt="Close button">
+        <h1>Bakgrundsfärg</h1>
+        <h2>Random tal i JS</h2>
+        <p id="randNmbr">000</p>
+        <button onclick="generateNumber()">Generera bakgrundsfärg</button>
+    </div>
+    <div id="ratingGood">
+        <h2>Dra hit om du gillade avsnittet!</h2>
+        <img src="img/225-happy2.svg" alt="">
+    </div>
+    <div id="ratingBad">
+        <h2>Dra hit om du vill ha bättre nästa gång!</h2>
+        <img src="img/239-angry2.svg" alt="">
+    </div>
+    <div id="ratingEpisode">
+        <h2>Berätta vad du tycker om senaste avsnittet!</h2>
+        <h3>Dra denna rutan till grön eller röd!</h3>
+        <h4>Avsnitt 10</h4>
+        <p>I avsnitt 10 diskuterade tungt och det kom tårar! Vi vill veta vad du tyckte.!</p>
+    </div>
+<div id="angryVisitor">
+    <h1>Tack för att du klagade...</h1>
+    <p>Vi tog bort allt innehåll i och med att du ändå inte verkar vara intresserad.</p>
+    <p>Du kan lämna sidan.</p>
+    <h2>Begått ett misstag?</h2>
+        <p>Det gör vi alla, dra gubben till rutan.</p> 
+</div>
+<div class="ratinggoodbox">
+    <div class="boxes" id="goodbox1">
+        <p>Dra den gröna gubben hit...!</p>
+    </div>
+    <div class="boxes" id="goodbox2">
+        <p>Dra den gröna gubben hit...!</p>
+    </div>
+    <div class="boxes" id="goodbox3">
+        <p>Dra den gröna gubben hit...!</p>
+    </div>
+    <div class="boxes" id="goodbox4">
+        <p>Dra den gröna gubben hit...!</p>
+    </div>
+</div>
+<div id="rating1" class="ratingGoodagain">
+    <img src="img/225-happy2.svg" alt="">
+</div>
+<div id="rating2" class="ratingGoodagain">
+    <img src="img/225-happy2.svg" alt="">
+</div>
+<div id="rating3" class="ratingGoodagain">
+    <img src="img/225-happy2.svg" alt="">
+</div>
+<div id="rating4" class="ratingGoodagain">
+    <img src="img/225-happy2.svg" alt="">
+</div>
+
+</body>
+
+</html>

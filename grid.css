@@ -1,0 +1,189 @@
+body {
+    display: grid;
+
+    grid-template-areas: 'header aside' 'nav aside' 'main aside' 'footer footer';               /* Place elements */
+    grid-template-rows: 210px 90px auto 50px;                                                   /* Size of elements */
+    grid-template-columns: 73% 27%;                                                             /* Sidebar only 27% wide */
+}
+
+header {
+    grid-area: header;                                                                          /* Give grid-are a name! */
+}
+
+nav {
+    display: grid;                                                                              /* Make grids!*/
+    grid-area: nav;
+    grid-template-areas: 'navimg navimg navimg navimg navimg' 'navtext navtext navtext navtext navtext';/* Show grid inside this grid */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-rows: 100%;
+}
+
+nav a p {
+    grid-area: navtext;
+}
+
+nav a img {
+    grid-area: navimg;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    padding: 20px;                                                                          /* Spacing inside grids */
+    grid-gap: 20px;                                                                         /* Spacing between grids */
+}
+
+aside {
+    grid-area: aside;
+    overflow-y: auto;
+}
+
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: 'footertext footertext footertext footerdiv';
+    grid-template-rows: 100%;                                                       /* Height of footer grids to align vertically */
+}
+
+footer div {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+footer div p {
+    grid-area: footertext;
+}
+
+footer #social_media {
+    grid-area: footerdiv;
+}
+
+footer #social_media a img {
+    width: 1em;
+}
+
+.index {                                        /* Build first page */
+    display: grid;
+    grid-template-areas: 'articledescription articledescription' 'articlebox articlebox';
+}
+
+.index .description {
+    grid-area: articledescription;
+}
+
+.index .box h3 {
+    grid-area: articlebox;
+}
+main .pagetitle{
+    display: none;
+}
+
+.about {                                            /* Build "om podcasten" */
+    display: grid;
+    grid-template-areas: 'articledescription' 'role' 'persons' 'roler' 'employee';
+    text-align: center;
+}
+
+.about .description {
+    grid-area: articledescription;
+    border-bottom: 1px solid lightgrey;
+    padding: 20px 0 20px 0;                        /* Spacing only above and below */
+}
+
+.about .helgaandgunvor {
+    grid-area: role;                                /* Used for placing header-text h3 */
+    display: grid;
+}
+
+.about .coworker {                                  /* Same here! */
+    grid-area: roler;
+    display: grid;
+}
+
+.about .persons {
+    grid-area: persons;
+    display: grid;
+    grid-template-columns: 40% 40%;                 /* These to grids got same width */
+    grid-gap: 10%;                                  /* With added gaping */
+    justify-content: space-around;                  /* And nice spacing between and around! */
+    padding: 20px 0 20px 0;
+    grid-template-areas: 'divperson divperson';
+    border-bottom: 1px solid lightgrey;
+}
+
+.about .employee {
+    grid-area: employee;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 3%;
+    justify-content: space-around;
+    padding: 20px 0 20px 0;
+    grid-template-areas: 'divperson divperson divperson';
+}
+
+.about section img {
+    grid-area: divperson;
+}
+
+.news {
+    display: grid;
+    grid-template-areas: 'postgrid';
+}
+
+.news .post h4 {
+    grid-area: postgrid;
+}
+
+
+@media screen and (max-width: 1070px){
+    body{
+        grid-template-areas: 'header' 'nav' 'main' 'footer';        
+        grid-template-columns: 100%; 
+        grid-template-rows: max-content max-content max-content max-content; 
+        grid-auto-columns: auto;
+        overflow-y: auto; 
+
+    }
+    header {
+        width: 100%;        
+        padding-top: 0;
+    }
+    header #header_img {
+        width: 100%;
+        height: 30vh;
+        border-radius: 0;
+        background-size: cover;
+        font-size: 2em;
+        margin-top: 0;
+    }
+    main{
+        overflow-y: initial;
+    }
+    .player img {
+        padding: 20px;
+        width: 60px;
+    }
+    .index {                                        /* Build first page */
+    display: grid;
+    grid-template-areas: 'articledescription' 'articlebox';
+}
+.about {                                            /* Build "om podcasten" */
+    display: grid;
+    grid-template-areas: 'articledescription' 'role' 'persons' 'roler' 'employee';
+    text-align: center;
+}
+    .about .persons {
+    grid-template-columns: 70%;                 /* These to grids got same width */
+    grid-template-areas: 'divperson' 'divperson';
+}
+.about .employee {
+    grid-template-columns: 70%;                 /* These to grids got same width */
+    grid-template-areas: 'divperson' 'divperson' 'divperson';
+}
+
+.about .persons img, .about .employee img{
+    width: 130px;
+}
+
+}

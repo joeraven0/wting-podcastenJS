@@ -1,0 +1,299 @@
+/* This CSS contains all "basic"-stylings, such as colors, fonts and spacing.
+It's is very a important to include THIS stylesheets. This is stylesheet 1 of 2!!!
+Include this css AND one of the files below
+-"main.css"    (USING FLOAT AND POSITION)
+or 
+"grid.css"     (USING GRID-LAYOUT)
+*/
+
+
+/* General global font styling */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    letter-spacing: .5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+h3 {
+    font-size: 1.5em;
+    text-decoration: underline;
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.4em;
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a,
+p {
+    font-size: 1.1em;
+}
+
+a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgba(105, 122, 190, 1);
+}
+
+
+
+/* General global body styling */
+
+body{
+    height: 100vh;
+    margin: auto;
+    width: 64vw;
+    /*64% of total screen width*/
+    overflow-y: hidden;
+    /*Always hide scrollbar on main-window - see main*/
+
+    font-family: 'Josefin Sans', sans-serif;
+    /*Font styling using google fonts*/
+}
+
+::-webkit-scrollbar {
+    /*Webkit only works in Google Chrome - scrollbar styling*/
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    border-left: 1px solid grey;
+    /* Adds border to header */
+    border-right: 1px solid grey;
+    position: relative;
+    /* This element i relative to content */
+}
+
+header #header_img {
+
+    width: 351px;
+    /* Div size */
+    height: 190px;
+    margin: auto;
+    /* Centering div */
+    margin-top: 20px;
+    /* Spacing above div */
+    border-radius: 10px;
+    /* Rounded corners */
+    background-image: url("img/header.jpg");
+    /* Added background image to div */
+    background-repeat: no-repeat;
+    /* If image too small, never add another image */
+    background-size: cover;
+    /* Cover background to fit div-size */
+    background-position: center center;
+    /* Center image x and y */
+}
+
+header #header_img #text {
+    position: absolute;
+    /* Text absolute positioning relative to parent */
+    bottom: 0;
+    /* Text to bottom of parent div */
+    padding: 20px;
+    /* Spacing! */
+}
+
+nav {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    text-align: center;
+    /* Center text below link-figure */
+    justify-content: space-around;
+    /* Center links evenly */
+}
+
+nav a {
+    margin-top: auto;
+    /* Spacing! */
+    margin-bottom: auto;
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 9px;
+    /* Soft rounded corners around link*/
+    padding: 5px;
+    /* Colored spacing round link */
+    color: black;
+    /* Text-color for link is black */
+}
+
+nav a:hover {
+    /* Highlight if hovering navbar-link */
+    background-color: rgba(155, 155, 155, 0.2);
+    transition: .3s;
+}
+
+.active {
+    background-color: rgba(155, 155, 155, 0.2);
+    /* Current page highlighted with this color */
+    font-weight: bold;
+    /* Current page highlighted with bold text */
+}
+
+main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Show scrollbar inside window if needed */
+    border: 1px solid grey;
+    border-bottom: none;
+    background-color: rgba(105, 122, 190, 0.1);
+}
+
+.about img {
+    border-radius: 50%;
+    /* Border radius 50% ends up as a CIRCLE! =) */
+}
+
+.about .persons img {
+    width: 100px;
+    /* Image size for persons, width is auto */
+}
+
+.about .employee img {
+    width: 70px;
+    /* Smaller image size for employee */
+}
+
+main .description h3 {
+    text-align: center;
+    /* Header is centered */
+}
+
+.episodes article {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: white;
+}
+
+.episodes table {
+    width: 100%;
+    /* Table size is 100% of parent width */
+    background-color: lightgrey;
+    text-align: center;
+}
+
+.episodes table td {
+    padding: 5px;
+}
+
+.episodes table th {
+    padding: 10px;
+}
+
+table tr:nth-child(even) {
+    /* Every second row gets another background color */
+    background-color: #DBDBDB;
+}
+
+table tr:hover {
+    /* If mouse hovering, change background color */
+    background-color: rgba(155, 155, 155, 0.2);
+}
+
+
+
+/*
+****  blog.html  ****
+*/
+
+main .pagetitle {
+    text-align: left;
+    background: linear-gradient(white, #DBDBDB);
+    font-size: 20px;
+    padding-left: 20px;
+    border-bottom: 2px solid #6B7E78;
+    text-decoration: none;
+}
+
+.news .post img,
+.news .post iframe {
+    /* Make image the correct size everytime */
+    margin-left: 20%;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.news .post {
+    background-color: rgba(155, 155, 155, 0.2);
+
+    /* Every news post looks like this */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid grey;
+}
+
+footer {
+    border-top: 1px solid grey;
+    text-align: center;
+    justify-content: space-around;
+}
+
+footer div p {
+    font-size: .9em;
+    /* Footer text size always following parent size */
+}
+
+aside {
+    overflow-y: auto;
+    /* For scrolling if needed */
+    overflow-x: hidden;
+    /* Never show x-axis scrollbar */
+}
+
+
+
+
+@media screen and (max-width: 1070px) {
+    header,
+    nav,
+    main {
+        border-style: none;
+    }
+    p,
+    a {
+        font-size: 30px;
+    }
+    body,
+    html {
+        width: 100%;
+        overflow: auto;
+    }
+    nav img {
+        width: 3em;
+    }
+}

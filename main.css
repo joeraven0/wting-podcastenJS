@@ -1,0 +1,219 @@
+/* Use this stylesheet together with "base.css!!!"*/
+
+header {
+    float: left;                                                      /* Header floating to left */
+    width: 72%;
+}
+
+nav {
+    height: 90px;                                                     /* Yes they all do! */
+    width: 72%;
+    float: left;
+    display: flex;                                                    /* Flex it to put elements horisontal */
+}
+nav a img {
+    display: block;                                                   /* Creating newline after this figure */
+    margin: auto;                                                     /* Centering figure above text */
+    margin-bottom: 5px;                                               /* Spacing before text */
+}
+aside {
+    width: 27%;                                                       /* Sidebar always scalable */
+    height: calc(100% - (1px + 40px));                                /* Responsive against static-sized footer */
+    position: relative;
+}
+
+main {
+    height: calc(100% - (2px + 20px + 190px + 90px + 40px));          /* Responsive fits static-sized elements */
+    position: relative;
+    width: 72%;
+    float: left;
+}
+
+
+/*
+****  index.html  ****
+*/
+
+main .box {                                                           /* Main page "latest new" & "lates episode" */
+    float: left;                                                    
+    margin-right: 0;
+    width: calc(50% - 30px);
+}
+/*
+****  about.html  ****
+*/
+
+.about .helgaandgunvor,                                               /* Header text "Vi som hörs" & "Medarbetare" */
+.about .coworker {
+    margin: 20px;
+}
+
+.about .persons,                                                      /* Images and text placed horisontal */
+.about .employee {
+    display: flex;
+    text-align: center;
+}
+
+.about .persons section {
+    width: 40%;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.about .employee section {
+    width: 30%;
+    margin: auto;
+    margin-top: 0;
+}
+main article {
+    margin: 20px;
+}
+
+/*
+****  contact.html  ****
+*/
+main form {
+    margin: auto;                                                      /* Contact form and input-fields */
+    width: 80%;
+}
+main form p {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+main form input {
+    height: 20px;
+}
+main form .textfield {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+main form .submit {
+    margin-top: 30px;
+    width: 100px;
+    height: 70px;
+    float: right;
+    border-radius: 8px;
+    cursor: pointer;                                          /* If hovering submit button, show mouse-pointer */
+}
+footer {
+    height: 40px;
+    width: 100%;
+    float: left;
+    justify-content: space-around;
+    display: inline-flex;
+}
+footer p {
+    font-size: 10px;
+}
+footer div,
+#social_media {
+    margin-top: auto;                                         /* For facebook, twitter and instagram logos */
+    margin-bottom: auto;
+}
+/*
+****  If media screen smaller than 1070px  ****
+*/
+@media screen and (max-width: 1070px) {                      /* If screen too small, change layout to look nicer */
+    
+    header {
+        width: 100%;        
+        padding-top: 0;
+    }
+    header #header_img {
+        width: 100%;
+        height: 30vh;
+        border-radius: 0;
+        background-size: cover;
+        font-size: 2em;
+        margin-top: 0;
+    }
+    nav {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    main {
+        width: 100%;
+        height: auto;
+    }
+    .index .box {
+        float: none;
+        clear: both;
+        width: auto;
+        margin: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .player img {
+        padding: 20px;
+        width: 60px;
+    }
+    .about .persons,
+    .about .employee {
+        display: block;
+        width: auto;
+
+    }
+    .about .persons section,
+    .about .employee section {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+    .about .persons img,
+    .about .employee img {
+        float: none;
+        clear: both;
+        width: 30%;
+        
+    }
+
+    aside {
+        display: none;
+    }
+    .contact form {
+        margin: auto;
+        width: auto;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .contact form p {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    .contact form input {
+        height: 5vh;
+        width: 70%;
+        font-size: 3vh;
+    }
+    .contact form .textfield {
+        width: 70%;
+    }
+
+    .contact form .submit {
+        margin-top: 30px;
+        width: 50%;
+        height: 8vh;
+        float: none;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    footer {
+        height: auto;
+    }
+    footer p {
+        font-size: 20px;
+    }
+    footer div {
+        height: auto;
+        width: 30%;
+    }
+    footer div img {
+        width: 25%;
+        margin: 5%;
+        margin-right: 0;
+    }
+  }
